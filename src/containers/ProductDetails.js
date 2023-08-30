@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
@@ -45,12 +45,16 @@ const ProductDetails = () => {
                 </h2>
                 <h3 className="ui brown block header">{category}</h3>
                 <p>{description}</p>
+                <Link to={'/cart'} >
                 <div className="ui vertical animated button" tabIndex="0">
                   <div className="hidden content">
                     <i className="shop icon"></i>
                   </div>
+                
                   <div className="visible content">Add to Cart</div>
+                
                 </div>
+                </Link>
               </div>
             </div>
           </div>

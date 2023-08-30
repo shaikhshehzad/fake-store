@@ -7,6 +7,7 @@ import ProductDetails from "./containers/ProductDetails";
 import Userlist from "./containers/Userlist"
 import UserDetails from './containers/UserDetails';
 import Notfound from './containers/Notfound'
+import Cart from "./containers/Cart";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
           <Route path="/product/:productId" component={ProductDetails} />
           <Route path="/allusers" exact component={Userlist} />
           <Route path="/userdetails/:params" component={UserDetails} />
+          <Route path="/cart" component={Cart} />
+
           <Route component={Notfound} ></Route>
         </Switch>
       </Router>
