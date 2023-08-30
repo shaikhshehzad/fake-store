@@ -91,3 +91,10 @@
   font-size: 18px;
   margin-left: 0;
 }
+.heading-custom{
+  display: block;
+  width: 100%;
+}
+.padding-left{
+  padding-left: 25px ;
+}

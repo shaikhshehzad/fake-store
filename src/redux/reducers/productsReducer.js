@@ -3,6 +3,10 @@ const intialState = {
   products: [],
 };
 
+const initialUsersState ={
+  users : []
+}
+
 export const productsReducer = (state = intialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_PRODUCTS:
@@ -23,3 +27,16 @@ export const selectedProductsReducer = (state = {}, { type, payload }) => {
       return state;
   }
 };
+
+export const usersReducer = ( state = initialUsersState, { type , payload }) =>{
+
+  
+
+
+  switch (type){
+  case ActionTypes.SET_USERS_LISTS:
+    return {...state , ...payload };
+  default :
+    return state ;
+  }
+}

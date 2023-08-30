@@ -18,3 +18,11 @@ export const removeSelectedProduct = () => {
     type: ActionTypes.REMOVE_SELECTED_PRODUCT,
   };
 };
+
+export const setUsersList = (users) =>{
+  return{
+    type : ActionTypes.SET_USERS_LISTS,
+    payload :users ,
+  }
+} 
+
