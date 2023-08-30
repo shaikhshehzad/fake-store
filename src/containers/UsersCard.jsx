@@ -16,7 +16,7 @@ export default function UsersCard() {
      
      user.name &&  
       <li key={user.name}>{user.name}
-       <Link to={`/userdetails/${user.id}`} >
+       <Link to={`/userdetails/id=${user.id}`} >
       <p  className='padding-left' >see details</p>
       </Link>
         </li>

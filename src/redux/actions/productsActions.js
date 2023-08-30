@@ -26,3 +26,18 @@ export const setUsersList = (users) =>{
   }
 } 
 
+export const selectUser = (user) => {
+  console.log(" ===========>>>>>>",user)
+  return {
+    type : ActionTypes.CURRENT_USER ,
+    payload : user ,
+
+  }
+}
+
+export const removeSelectedUser = () => {
+  return {
+    type: ActionTypes.RESET_CURRENT_USER,
+  };
+};
+

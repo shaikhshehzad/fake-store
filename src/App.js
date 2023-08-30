@@ -6,6 +6,7 @@ import "./App.css";
 import ProductDetails from "./containers/ProductDetails";
 import Userlist from "./containers/Userlist"
 import UserDetails from './containers/UserDetails';
+import Notfound from './containers/Notfound'
 function App() {
   return (
     <div className="App">
@@ -15,8 +16,8 @@ function App() {
           <Route path="/" exact component={ProductListing} />
           <Route path="/product/:productId" component={ProductDetails} />
           <Route path="/allusers" exact component={Userlist} />
-          <Route path="/userdetails/:Id" component={UserDetails} />
-          <Route>404 Not Found!</Route>
+          <Route path="/userdetails/:params" component={UserDetails} />
+          <Route component={Notfound} ></Route>
         </Switch>
       </Router>
     </div>

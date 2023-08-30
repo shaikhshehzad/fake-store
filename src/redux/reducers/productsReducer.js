@@ -17,7 +17,6 @@ export const productsReducer = (state = intialState, { type, payload }) => {
 };
 
 export const selectedProductsReducer = (state = {}, { type, payload }) => {
-  console.log(type);
   switch (type) {
     case ActionTypes.SELECTED_PRODUCT:
       return { ...state, ...payload };
@@ -29,14 +28,21 @@ export const selectedProductsReducer = (state = {}, { type, payload }) => {
 };
 
 export const usersReducer = ( state = initialUsersState, { type , payload }) =>{
-
-  
-
-
   switch (type){
   case ActionTypes.SET_USERS_LISTS:
     return {...state , ...payload };
   default :
     return state ;
   }
+}
+
+export const selectedUserReducer = (state = {} , {type , payload }) =>{
+  switch(type){
+    case ActionTypes.CURRENT_USER :
+      return { ...state , ...payload };
+    case ActionTypes.RESET_CURRENT_USER:
+      return {} ; 
+    default:
+      return state ;
+  } 
 }

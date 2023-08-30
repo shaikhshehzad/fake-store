@@ -17,7 +17,7 @@ const ProductDetails = () => {
       .catch((err) => {
         console.log("Err: ", err);
       });
-    dispatch(selectedProduct(response.data));
+    dispatch(selectedProduct(response.data)); 
   };
 
   useEffect(() => {
